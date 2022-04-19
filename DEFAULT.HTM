@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+<TITLE>
+                     Online Examination...
+</TITLE>
+<!--<META content="text/html; charset=windows-1252" http-equiv=Content-Type>-->
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<style>
+
+button.a{width:60;height:30;color:aqua;background-color:brown;font-size:15;font-family:arial }
+
+</style>
+<SCRIPT language=Javascript1.2> 
+<!--
+
+var mymessage = "Sorry, but you can't view the source of this page.";
+
+function rtclickcheck(keyp){
+  if (navigator.appName == "Netscape" && keyp.which == 3) {
+    alert(mymessage);
+    return false;
+  }
+
+  if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+    alert(mymessage);
+    return false;
+  }
+}
+
+document.onmousedown = rtclickcheck
+//-->
+</SCRIPT>
+
+<SCRIPT>
+function getQueryParams() {
+ var params = new Object();
+ var query = location.search.substring(1); var pairs = query.split("&");
+ for (var i = 0; i < pairs.length; i++) {
+ var pos = pairs[i].indexOf('=');
+ if (pos == -1) continue;
+ var argname =pairs[i].substring(0,pos);
+ var value = pairs[i].substring(pos + 1);
+ params[argname] = unescape(value);
+}
+return params;
+}
+</SCRIPT>
+<STYLE>
+A.{TEXT-DECORATION: none;color:brown;font-family:Comic Sans MS}
+A:hover{text-decoration:underline;color:brown;font-family:Comic Sans MS}
+</STYLE>
+
+<STYLE>
+.spanstyle {COLOR: green; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible}
+</STYLE>
+<SCRIPT>
+var x,y
+var step=20
+var flag=0
+
+// Your snappy message. Important: the space at the end of the sentence!!!
+var message="Online Examination "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</SCRIPT>
+
+<SCRIPT>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+</HEAD>
+<BODY background="b.gif" onload=makesnake() 
+style="OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%" bgproperties="fixed">
+<center><span style="filter: glow(Color=orange,Strength=5); width: 150;font-size:40;color:blue;font-family:monotype corsiva">Welcome</span></center>
+<center><span style="filter: glow(Color=orange,Strength=5); width: 150;font-size:40;color:blue;font-family:monotype corsiva">To</span></center>
+<center><span style="filter: glow(Color=orange,Strength=5); width: 150;font-size:40;color:blue;font-family:monotype corsiva">Online_Examination</span></center>
+<!--<center><pre><font size="6" face="monotype corsiva" color="blue"><b>Welcome
+To
+  On-line examination<sup><font face="arial" size="3">TM</font></sup>.</b></font></pre></center>-->
+<hr font color="green"></hr>
+<!--<left><P  id="getDtTm" align="center" class="afilter" style="font-size:15pt;color:red"></P></left>-->
+<center><img1 src="f.gif" height="40" width="500" scrolling="no"></img></center>
+<center><img src="sir.gif" height="190" width="350" scrolling="no"></img></center>
+<P title="Introduction" align="justify">
+<H1 align=center><FONT 
+      face="Verdana, sans-serif">Introduction !</FONT></H1><FONT color=#000080 
+      face=Arial size=2>OnlineExam™</FONT></B><FONT face=Arial size=2> is used 
+      for distance learning. Administer exams and qualification tests or review 
+      quizzes in a secure client server implementation using either an internal 
+      server or Internet/Intranet linkage.<BR>
+      <P><FONT face=Arial size=2><B><FONT color=#800000>AUTOMATE THE TESTING 
+      PROCESS</FONT></B><BR>With <B>OnlineExam™</B> you can create and 
+      administer exams, tests or quizzes in a secure client-server environment. 
+      The system is web-enabled so you can use either an internal server or link 
+      up over the Internet or an Intranet. No programming is necessary. Just 
+      input your questions, select the answer type such as Yes/No, Matching, 
+      Multiple Choice, Text Answer, True/False, or Numeric. Those being tested 
+      scroll thru the exam questions and respond online from their home computer 
+      or workstation. Once the test has been distributed, completed submissions 
+      are electronically sent to the <B>OnlineExam™</B> data processing engine, 
+      which stores, scores and tabulates them. Results are published by the 
+      reporting module. Detailed records of all data turned in by each 
+      respondent is readily accessible by authorized users from the 
+      <B>OnlineExam™</B> SQL database. That’s how easy it is!<BR></FONT></P>
+      <P><FONT face=Arial size=2><B><FONT color=#800000>TYPICAL 
+      APPLICATIONS</FONT></B><BR>• Remote Examinations<BR>• Admissions 
+      Testing<BR>• Employee Skill Assessment<BR>• Virtual Classroom Quizzes<BR>• 
+      Qualification &amp; Eligibility Determination<BR>• Self Learning 
+      Programs<BR>• Distance Learning Programs<BR>• Applicant Experience 
+      Level<BR></FONT></P>
+
+<!--<button class="a" onclick="window.location.href='frame.htm'" type=button style="cursor:hand">Sign In</button>-->
+<center><a href="frame.htm"><img src="sign.gif"></img></a></center>
+</BODY>
+</HTML>

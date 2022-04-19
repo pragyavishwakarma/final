@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>Conclusion</title>
+<style>
+
+a:hover{text-decoration:underline;color:red;fonr-family:Small Fonts}
+.aFilter {filter:Alpha(Opacity=100, Style=2);color:yellow;width:200pt;background-color:red;border:none}
+.gradiant{height:100;width:200;color:lime;filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=cyan,EndColorStr=white)}
+</style>
+<script>
+
+var detGender=0
+//var sMd=""
+function chkBlank(){
+	if(frm.sname.value==""){
+		alert("Username must be entered !")
+		frm.sname.focus()
+		return false
+	}
+	if(frm.sUserId.value==""){
+		alert("User-id must be entered !")
+		frm.sUserId.focus()
+		return false
+	}	
+	if(frm.spass.value==""){
+		alert("Password must be entered !")
+		frm.spass.focus()
+		return false
+	}
+    if(frm.rpass.value==""){
+		alert("Please re-enter your password  !")
+		frm.rpass.focus()
+		return false
+	}
+	 if(frm.fname.value==""){
+		alert("You have to fill your father's name !")
+		frm.fname.focus()
+		return false
+	}
+	 if(frm.pname.value==""){
+		alert("Enter your pet name !!")
+		frm.pname.focus()
+		return false
+	}
+	 if(frm.a.value==""){
+		alert("Age have to fill !")
+		frm.a.focus()
+		return false
+	}
+	 
+                   if(frm.selState.selectedIndex==0){
+		alert("Please select the state you belong  !")
+		frm.selState.focus()
+		return false
+	}
+                    if(frm.selCity.selectedIndex==0){
+		alert("Please select the city you belong  !")
+		frm.selCity.focus()
+		return false
+	}
+	 if(frm.sem.selectedIndex==0){
+		alert("Please select the semester you belong  !")
+		frm.sem.focus()
+		return false
+	}
+	if(frm.spass.value!=frm.rpass.value){
+		alert("Password mismatch !")
+		frm.spass.focus()
+		return false
+	}
+
+	return true
+	
+}
+</script>
+<style>
+
+*.{font-size:12}
+</style>
+</head>
+<body bgColor1=#ffffff bgcolor="ivory" onload="frm.sname.focus()">
+<h1>
+<font color=#804040><center>
+Registration form:
+</center></font>
+</h1>
+<hr color="#804040"></hr>
+<form name="frm" onsubmit="return chkBlank()" action="register.asp" method="post">
+<font  color=#804040 face=arial size=2>
+<ul>
+<table>
+             <tr>
+                    <td>
+                             <li>
+                                     User name: 
+                             </li>                              
+                    </td>
+                    <td>
+                                     <input name="sname" style="padding-left:2mm"   type="text" size="40" maxlenght="20" readonly1="true" style="border:1 solid #804040" />
+                   </td>
+                   <tr>
+                    <td>
+                                  <li> User ID:</li>
+                   </td>
+                    <td>
+                                 <input name="sUserId" cellpadding=4 type="text" size="40" maxlenght="20" readonly1="true" style="padding-left:2mm" style="border:1 solid #804040" /></li>
+                  </td>
+          </tr>
+          <tr>
+                  <td>
+                                <li> Password:</li>
+                  </td>
+                  <td>
+                               <input name="spass" type="password" size="40" maxlenght="20" style="padding-left:2mm" style="border:1 solid #804040"/>
+                 </td>
+         <tr>
+	<td>
+                             <li>Re-enter password:</li>
+	</td>
+	<td>
+                             <input name="rpass" type="password" size="40" maxlenght="20" style="padding-left:2mm" style="border:1 solid #804040" />
+	</td>
+       </tr>
+       <tr>
+	<td>
+                         <LI>Father's name:</li>
+	</td>
+	<td>
+                        <input name="fname" type="text" size="40" maxlenght="20" readonly1="true" style="padding-left:2mm" style="border:1 solid #804040" />
+	</td>
+       </tr>
+       <tr>
+	<td>
+		<li> Enter your pet name:</li>
+	</td>
+	<td>
+                                <input  name="pname" type="text" size="40" maxlenght="20" readonly1="true" style="padding-left:2mm" style="border:1 solid #804040" /></li>
+	</td>
+      </tr>
+      <tr>
+	<td>
+		<li>Sex:</li>
+	</td>
+	<td>
+		<input   type="radio" name="r" checked="true" value="M"/> Male 
+&nbsp; <input type="radio" name="r"  value="F"/>Female
+	</td>
+       </tr>
+       <tr>
+	<td>                   
+                             <li>Age:</li>
+	</td>
+	<td>
+                             <input name="a" type="number" size="3" maxlenght="3" style="border:1 solid #804040" style="padding-left:2mm"/>
+	</td>
+       </tr>
+      
+</SELECT>
+       <tr>
+	<td>
+                           <li> Select your state:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+	</td>
+	<td>
+<select  name="selState">
+	<option>---SELECT STATE---</option>
+                    <option>West Bengal</option>
+	<option>Karnataka</option>
+	<option>Uttar pradesh</option>
+	<option>Bihar</option>
+              <option>Ahmadabad</option>
+	<option>Maharastra</option>
+	<option>Himachal pradesh</option>
+	<option>Kerala</option>
+	<option>Tamilnadu</option>
+	<option>Gujrat</option>
+	<option>Bhopal</option>
+	<option>Eluru</option>
+	<option>Faizabad</option>
+</select>
+	</td>
+	<td>
+if any other then write:
+	</td>
+	<td>
+<input type="text" size="20" maxlenght="20" readonly1="true" style="border:1 solid #804040" style="padding-left:2mm"/ id=text1 name=text1>
+	</td>
+       </tr>
+       <tr>
+               <td>
+<li> Select your city:</li>
+	</td>
+	<td>
+ <select name="selCity">
+	<option>---SELECT CITY---</option>
+                      <option>Agartala</option>
+	<option>Agra</option>
+	<option>Ahmedabad</option>
+	<option>Allahbad</option>
+                <option>Amiritsar</option>
+	<option>Asansol</option>
+	<option>Bangalore</option>
+	<option>Baroda</option>
+	<option>Bhopal</option>
+	<option>Gujrat</option>
+	<option>Bhopal</option>
+	<option>Eluru</option>
+	<option>Faizabad</option>
+</select>
+	</td>
+	<td>
+                 if any other then write:
+	</td>
+	<td>
+                <input type="text" size="20" maxlenght="20" readonly1="true" style="border:1 solid #804040" style="padding-left:2mm"/ id=text2 name=text2>
+	</td>
+       </tr>
+       <tr>
+	<td>
+                         <li>Enter your semester:</li>
+	</td>
+	<td>
+                            <select name="sem">
+	<option>---SELECT SEM---</option>
+	<option>1st sem</option>
+	<option>2nd sem</option>
+	<option>3rd sem</option>
+	<option>4th sem</option>
+	<option>5th sem</option>
+	<option>6th sem</option>
+</select>
+	</td>
+         </tr>
+         <tr>
+	<td>
+                          <input   value="Submit"  type="submit"/ id=submit1 name=submit1>
+	</td>
+	<td>
+                          <input onclick="window.location.href='login.htm'" type=button class1="aFilter"  value="Back" / id=button1 name=button1>
+	</td>
+          </tr>
+          </table>
+</font>
+
+</body>
+</html>

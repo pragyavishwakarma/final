@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+a.{text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+<script>
+var x=false
+
+function blinkText()	{
+		x=! x
+		x?myText.style.visibility='hidden':myText.style.visibility='visible'
+	setTimeout('blinkText()',500)
+}
+
+
+</script>
+
+
+</head>
+<body background="end.gif" onload="blinkText()">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<span id="myText" onclick="blinkText()" style="color:red;font-family:Monotype Corsiva;font-size:50"><marquee>Thank you for using our web site.</marquee></span>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<P align="right"><font face="arial black" size="2">Click here to go <a href="default.htm" target="_top"><font color="blue">back</font></a> home page</font></p>
+
+</body>
+
+
+
+</html>

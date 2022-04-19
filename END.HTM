@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+<TITLE>
+                     Online Examination...
+</TITLE>
+<!--<META content="text/html; charset=windows-1252" http-equiv=Content-Type>-->
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<SCRIPT language=Javascript1.2> 
+<!--
+
+var mymessage = "Sorry, but you can't view the source of this page.";
+
+function rtclickcheck(keyp){
+  if (navigator.appName == "Netscape" && keyp.which == 3) {
+    alert(mymessage);
+    return false;
+  }
+
+  if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+    alert(mymessage);
+    return false;
+  }
+}
+
+document.onmousedown = rtclickcheck
+//-->
+
+</SCRIPT>
+
+<SCRIPT>
+function getQueryParams() {
+ var params = new Object();
+ var query = location.search.substring(1); var pairs = query.split("&");
+ for (var i = 0; i < pairs.length; i++) {
+ var pos = pairs[i].indexOf('=');
+ if (pos == -1) continue;
+ var argname =pairs[i].substring(0,pos);
+ var value = pairs[i].substring(pos + 1);
+ params[argname] = unescape(value);
+}
+return params;
+}
+</SCRIPT>
+<STYLE>
+A.{TEXT-DECORATION: none;color:brown;font-family:Comic Sans MS}
+A:hover{text-decoration:underline;color:brown;font-family:Comic Sans MS}
+</STYLE>
+
+<STYLE>
+.spanstyle {COLOR: magenta; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible}
+</STYLE>
+<SCRIPT>
+var x,y
+var step=20
+var flag=0
+
+// Your snappy message. Important: the space at the end of the sentence!!!
+var message="Sagar"
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</SCRIPT>
+
+<SCRIPT>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</SCRIPT>
+</HEAD>
+<script>
+var x=false
+
+function blinkText()	{
+		x=! x
+		x?myText.style.visibility='hidden':myText.style.visibility='visible'
+	setTimeout('blinkText()',500)
+}
+
+
+</script>
+
+
+<style>
+.gradiant{height:100;width:200;color:lime;filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr=orange,EndColorStr=white)}
+</style>
+<style>
+.spanstyle {COLOR: ivory; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible}
+</style>
+<SCRIPT>
+var x,y
+var step=20
+var flag=0
+
+// Your snappy message. Important: the space at the end of the sentence!!!
+var message="Online Examination "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</SCRIPT>
+
+<body background="end.gif" style="OVERFLOW-Y: scroll; OVERFLOW-X: hidden; WIDTH: 100%" onload1  ="blinkText()" class1="gradiant">
+<span id="myText" onclick="blinkText()" style="FONT-SIZE: 50px; COLOR: black; FONT-FAMILY: Comic Sans MS">About me...</span>
+<h2><font color="black"><u>Designed by,</u></font></h2>
+
+<h3><font color="black">Suhas Manjunath Kashyap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </U></font></h3>
+<p><font color="black">
+I designed this web page to produce a better way to give a examination from a remote place.
+And if any person has any extra idea or any kind of question they can contact us. 
+</font><p>
+<CENTER><h7><font color="black">My 
+contact number is</font></CENTER>
+<CENTER><FONT color=black>E-mail 
+:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></CENTER>
+<div class=""></div>
+</body>
+</HTML>

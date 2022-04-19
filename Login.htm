@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<TITLE>
+                        Login
+</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+
+<style>
+a.{Text-decoration:none}
+a:hover{Text-decoration:underline;font-family:arial;color:magenta}
+</style>
+
+<script>
+
+var detGender=0
+
+function chkBlank(){
+	if(form1.userID.value==""){
+		alert("User ID must be entered !")
+		form1.userID.focus()
+		return false
+	}
+	if(form1.password.value==""){
+		alert("Enter password !")
+		form1.password.focus()
+		return false
+	}
+	 if(form1.sem.selectedIndex==0){
+		alert("Please select the semester you belong  !")
+		form1.sem.focus()
+		return false
+	}
+	
+	return true
+	
+}
+function passUserId(ohref){
+
+	ohref.href="ForgetPassword.asp?userid="+form1.userID.value+"&semVal="+form1.sem.value
+}
+</script>	
+<style>
+
+*.{font-size:12}
+</style>
+</HEAD>
+<BODY aLink=#0000ee bgColor=DeepSkyBlue link=#0000ee text=#000000 vLink=#551a8b>
+
+<CENTER>
+
+	<IMG height=100 src="i.gif" width=400>
+
+</CENTER>
+
+<BR>
+<CENTER>
+<TABLE cellPadding=2 cellSpacing=2 width=620>
+  <TBODY>
+  <TR>
+                <TD vAlign=top width=444>
+                       <FORM action=INTRO.asp method=post name=form1 onsubmit="return chkBlank()">     
+      <P>&nbsp;</P>
+ <TABLE cellPadding=0 cellSpacing=0 width=440>
+     <TBODY>
+     <TR>
+                  <TD align=right width=60><STRONG><FONT face=Arial size=2>User ID</FONT></STRONG> 
+                 </TD>
+                     <TD align=right width=140><INPUT name=userID style="HEIGHT: 22px; WIDTH: 138px" style="border:1 solid DeepSkyBlue" style="padding-left:2mm"></TD>
+          <TD width=205></TD></TR>
+        <TR>
+          <TD align=right width=60><STRONG><FONT face=Arial size=2>Password 
+            </FONT></STRONG></TD>
+          <TD align=right width=140><INPUT name=password 
+            style="HEIGHT: 22px; WIDTH: 137px" type=password style="border:1 solid DeepSkyBlue" style="padding-left:2mm"></TD>
+          <TD vAlign=center width=205>&nbsp;<FONT size=2><FONT 
+            face=Arial> Forget your password?
+        <A  href="ForgetPassword.asp" onmouseover="passUserId(this)">Click Here</A></FONT></FONT></TD></TR>
+         <tr>
+			<td align=right>
+				<STRONG><FONT face=Arial size=2>Semester</font></strong></td>
+				<td>&nbsp;<SELECT name=sem style="width:137"> <OPTION selected>---SELECT SEM---</OPTION> 
+				<OPTION value="1st sem">1st 
+sem</OPTION> <OPTION value="2nd sem">2nd sem</OPTION> <OPTION value="3rd sem">3rd sem</OPTION> <OPTION value="4th sem">4th 
+sem</OPTION> <OPTION value="5th sem">5th sem</OPTION> <OPTION value="6th sem">6th sem</OPTION></SELECT></td>
+        </tr>
+        <TR>
+          <TD width=60></TD>
+<TD width=140><INPUT type=submit value=Submit> 
+
+          <TD width=205></TD></TR>
+        <TR vAlign=bottom>
+          <TD align=right height=50 width=60><FONT face=Arial 
+            size=2><STRONG>New User </STRONG></FONT></TD>
+          <TD height=50 width=140><INPUT onclick="window.location.href = 'button.htm'" type=button value=Register></TD>
+          <TD height=50 width=205></TD></TR></TBODY></TABLE><INPUT name=FromWhere 
+      type=hidden value=FromLogin> </FORM>
+      <P>&nbsp;</P>
+  </TABLE>
+<CENTER></CENTER></CENTER></BODY></HTML>

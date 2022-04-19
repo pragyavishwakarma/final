@@ -1,0 +1,17 @@
+create table contact(Name_of_Org varchar2(40),Stu_Name varchar2(20),
+title varchar2(18),mailing_add varchar2(40),city varchar2(27),
+state varchar2(20),zip number,phone_number number,fax number,
+email varchar2(30),comments varchar2(30));
+
+
+create table login(user_id varchar2(25),password varchar2(15));
+
+
+create table Register(user_name varchar2(20),user_id varchar2(20),
+password varchar2(15),fathers_name varchar2(20),pet_name varchar2(15),
+sex varchar2(10),age number,state varchar2(40),city varchar2(30),
+semester varchar2(25));
+
+create table result_web(user_id varchar2(20),semester varchar2(25),
+subject varchar2(30),score varchar2(5),grade varchar2(15),
+exam_taken date);
