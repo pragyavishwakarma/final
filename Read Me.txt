@@ -1,0 +1,29 @@
+Test Generator 
+Test Generator is software that is used to create a test or work with a question bank. Question bank contains large number of questions. You can create a new question bank or even add new questions to the existing question bank. You also have the possibility to view the existing question bank.
+
+The actual task is to generate a test. There are two choices to create a new test. First, you can create a test on your own. Second, you can use an existing question bank to create a test from the available questions in the selected question bank. You also have the possibility to open a test if saved.
+
+This software contains a complete word processing capability so that you can easily cut, copy, paste, replace, undo or find any selected text. It has an enhanced capability to workout with 8 different questions including   True/False, Multiple choice questions, Yes/No, Essay type, Short Answers, Completion, Problem and other questions.
+
+This software provides an advantage of giving multiple versions of the same test with corresponding answer keys and to print multiple versions of the same test. It also has the capability to enter unlimited number of new questions. It is used to print the answer key strip for easier test grading.
+
+
+
+
+Software and Hardware Requirements
+
+
+
+ Software Requirements:
+Operating System	: Windows 2000/xp/Vista
+Front End Software 	:  Microsoft Visual studio 2005
+Database		: Microsoft SQL Server 2005
+
+
+Hardware Requirements:
+Processor		: Pentium 4.0(1.6 GHz) and Higher
+Memory		:  512 MB
+Hard Disk		: 10 GB
+
+
+
